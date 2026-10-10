@@ -1,90 +1,82 @@
 [
   {
     "n": 1,
-    "id": "survey_on_spatiotemporal",
-    "url": "https://arxiv.org/abs/survey_on_spatiotemporal",
-    "title": "Survey on Spatiotemporal Consistency in Video Generation",
-    "date": "2023",
+    "id": "2610.12459",
+    "url": "https://arxiv.org/abs/2610.12459",
+    "title": "Definitions of Video Generation",
+    "date": "2026-10-08",
     "source": "arxiv"
   },
   {
     "n": 2,
-    "id": "overview",
-    "url": "https://example.com/overview",
-    "title": "Overview of Video Generation Technology Discussing Continuity and Temporal Consistency",
-    "date": "2022",
-    "source": "web"
+    "id": "2405.09589",
+    "url": "https://huggingface.co/papers/2405.09589",
+    "title": "Overview of Multimodal Generation Definitions",
+    "date": "2024-05-15",
+    "source": "hf-search"
   },
   {
     "n": 3,
-    "id": "3d_camera_motion",
-    "url": "https://arxiv.org/abs/3d_camera_motion",
-    "title": "3D Camera Motion Conditioning",
-    "date": "2023",
+    "id": "2608.24714",
+    "url": "https://arxiv.org/abs/2608.24714",
+    "title": "GaussianWAM: Distilling Geometry and Semantics from 3D Gaussian Fields into World-Action Models",
+    "date": "2026-08-25",
     "source": "arxiv"
   },
   {
     "n": 4,
-    "id": "echovideo",
-    "url": "https://arxiv.org/abs/echovideo",
-    "title": "EchoVideo: High-Quality Human Video Generation",
-    "date": "2022",
-    "source": "arxiv"
+    "id": "2405.13195",
+    "url": "https://huggingface.co/papers/2405.13195",
+    "title": "CamViG: Camera Aware Image-to-Video Generation with Multimodal Transformers",
+    "date": "2024-05-21",
+    "source": "hf-search"
   },
   {
     "n": 5,
-    "id": "interactivevideo",
-    "url": "https://huggingface.co/interactivevideo",
-    "title": "InteractiveVideo: User-Centric Interactions",
-    "date": "2023",
+    "id": "2504.08641",
+    "url": "https://huggingface.co/papers/2504.08641",
+    "title": "Training-free Guidance in Text-to-Video Generation via Multimodal Planning and Structured Noise Initialization",
+    "date": "2025-04-11",
     "source": "hf-search"
   },
   {
     "n": 6,
-    "id": "review_of_video",
-    "url": "https://arxiv.org/abs/review_of_video",
-    "title": "A Review Tracing the Evolution of Video Generative Models, Including GANs and Diffusion Models",
-    "date": "2022",
-    "source": "arxiv"
-  },
-  {
-    "n": 7,
-    "id": "glossary",
-    "url": "https://example.com/glossary",
-    "title": "Glossary of Essential Terms Relevant to AI Video Generation",
-    "date": "2023",
-    "source": "web"
-  },
-  {
-    "n": 8,
-    "id": "diffusion_models",
-    "url": "https://huggingface.co/diffusion_models",
-    "title": "Diffusion Models for Multimodal Systems",
-    "date": "2023",
+    "id": "2402.03040",
+    "url": "https://huggingface.co/papers/2402.03040",
+    "title": "InteractiveVideo: User-Centric Controllable Video Generation with Synergistic Multimodal Instructions",
+    "date": "2024-02-05",
     "source": "hf-search"
   },
   {
+    "n": 7,
+    "id": "2501.13452",
+    "url": "https://huggingface.co/papers/2501.13452",
+    "title": "EchoVideo: Identity-Preserving Human Video Generation by Multimodal Feature Fusion",
+    "date": "2025-01-23",
+    "source": "hf-search"
+  },
+  {
+    "n": 8,
+    "id": "2311.00308",
+    "url": "https://arxiv.org/abs/2311.00308",
+    "title": "From Image to Language: A Critical Analysis of Visual Question Answering (VQA) Approaches, Challenges, and Opportunities",
+    "date": "2023-11-01",
+    "source": "arxiv"
+  },
+  {
     "n": 9,
-    "id": "multimodal_video",
-    "url": "https://huggingface.co/multimodal_video",
-    "title": "Advancements in Multimodal Video Synthesis",
-    "date": "2023",
-    "source": "hf-daily"
+    "id": "2406.08656",
+    "url": "https://huggingface.co/papers/2406.08656",
+    "title": "TC-Bench: Benchmarking Temporal Compositionality in Text-to-Video and Image-to-Video Generation",
+    "date": "2024-06-12",
+    "source": "hf-search"
   },
   {
     "n": 10,
-    "id": "temporal_consistency",
-    "url": "https://huggingface.co/temporal_consistency",
-    "title": "Maintaining Temporal Consistency",
-    "date": "2022",
-    "source": "hf-daily"
-  },
-  {
-    "n": 11,
-    "id": "identity_preservation",
-    "url": "https://example.com/identity_preservation",
-    "title": "Managing Identity Preservation in Synthesized Content",
-    "date": "2023",
-    "source": "web"
+    "id": "2609.26187",
+    "url": "https://arxiv.org/abs/2609.26187",
+    "title": "TREND-10K: A Comprehensive Dataset for Next-Generation Video Quality Assessment Based on Preference-Driven Media",
+    "date": "2026-08-11",
+    "source": "arxiv"
   }
 ]

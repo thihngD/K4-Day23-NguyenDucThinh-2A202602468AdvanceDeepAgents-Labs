@@ -1,66 +1,58 @@
 [
   {
     "n": 1,
-    "id": "probing-scientific-general-intelligence-of-llms-with-scientist-aligned-workflows",
-    "url": "https://arxiv.org/abs/2512.16969",
-    "title": "Probing Scientific General Intelligence of LLMs with Scientist-Aligned Workflows",
-    "date": "2025-12-18",
-    "source": "arxiv"
+    "id": "foundational-concepts-rl",
+    "url": "https://spinningup.openai.com/en/latest/spinningup/rl_intro.html",
+    "title": "Reinforcement Learning: An Introduction",
+    "date": "",
+    "source": "web"
   },
   {
     "n": 2,
-    "id": "a-survey-of-safe-reinforcement-learning-and-constrained-mdps",
-    "url": "https://arxiv.org/abs/2505.17342",
-    "title": "A Survey of Safe Reinforcement Learning and Constrained MDPs: A Technical Survey on Single-Agent and Multi-Agent Safety",
-    "date": "2025-05-22",
-    "source": "arxiv"
+    "id": "2602.05261",
+    "url": "https://huggingface.co/papers/2602.05261",
+    "title": "Length-Unbiased Sequence Policy Optimization: Revealing and Controlling Response Length Variation in RLVR",
+    "date": "",
+    "source": "hf-search"
   },
   {
     "n": 3,
-    "id": "smaller-abstract-state-spaces-enable-cross-scale-generalization-in-reinforcement-learning",
-    "url": "https://arxiv.org/abs/2605.20272",
-    "title": "Smaller Abstract State Spaces Enable Cross-Scale Generalization in Reinforcement Learning",
-    "date": "2026-05-19",
-    "source": "arxiv"
+    "id": "2509.08827",
+    "url": "https://huggingface.co/papers/2509.08827",
+    "title": "A Survey of Reinforcement Learning for Large Reasoning Models",
+    "date": "",
+    "source": "hf-search"
   },
   {
     "n": 4,
-    "id": "training-a-helpful-and-harmless-assistant-with-reinforcement-learning-from-human-feedback",
-    "url": "https://huggingface.co/papers/2204.05862",
-    "title": "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback",
-    "date": "2022-04-12",
-    "source": "hf-search"
+    "id": "2609.36816",
+    "url": "https://arxiv.org/abs/2609.36816",
+    "title": "Towards Better Training Signal: Advantage Clipped Policy Optimization",
+    "date": "2026-09-29",
+    "source": "arxiv"
   },
   {
     "n": 5,
-    "id": "offline-reinforcement-learning-as-one-big-sequence-modeling-problem",
-    "url": "https://huggingface.co/papers/2106.02039",
-    "title": "Offline Reinforcement Learning as One Big Sequence Modeling Problem",
-    "date": "2021-06-03",
-    "source": "hf-search"
+    "id": "reinforcement-learning-introduction",
+    "url": "http://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf",
+    "title": "Foundational Concepts in Reinforcement Learning",
+    "date": "",
+    "source": "web"
   },
   {
     "n": 6,
-    "id": "state-of-reinforcement-learning-for-llm-reasoning",
-    "url": "https://magazine.sebastianraschka.com/p/the-state-of-llm-reasoning-model-training",
-    "title": "The State of Reinforcement Learning for LLM Reasoning",
-    "date": "2025-04-19",
+    "id": "foundations-ml-rl",
+    "url": "https://cs.nyu.edu/~mohri/mls/ml_reinforcement_learning.pdf",
+    "title": "Foundations of Machine Learning Reinforcement Learning",
+    "date": "",
     "source": "web"
   },
   {
     "n": 7,
-    "id": "reinforcement-learning-in-era-of-llms",
-    "url": "https://dlnext.acm.org/doi/10.1145/3837057",
-    "title": "Reinforcement Learning in the Era of Large Language Models: Challenges and Opportunities",
-    "date": "2026-09-29",
-    "source": "web"
-  },
-  {
-    "n": 8,
-    "id": "survey-on-rl-for-large-reasoning-models",
-    "url": "https://arxiv.science/abs/2509.08827",
-    "title": "A Survey of Reinforcement Learning for Large Reasoning Models",
-    "date": "2025-10-09",
-    "source": "web"
+    "id": "2609.39828",
+    "url": "https://arxiv.org/abs/2609.39828",
+    "title": "KUAISHOU Explorer LLM-Rec Challenge 2026: Reasoning Generative Recommendation",
+    "date": "2026-09-30",
+    "source": "arxiv"
   }
 ]

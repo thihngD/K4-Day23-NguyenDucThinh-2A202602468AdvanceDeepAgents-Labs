@@ -17,6 +17,9 @@ _GROUP = re.compile(r"\[(\d+(?:\s*[,–-]\s*\d+)*)\](?!\()")  # [3] [1, 2] [1-3]
 _REF_LINE = re.compile(r"(?m)^\[(\d+)\](.*)$")
 _URL = re.compile(r"https?://\S+")
 _PLACEHOLDER_HOSTS = ("example.com", "example.org", "example.net", "test.com", "localhost", "yourdomain.com")
+_PLACEHOLDER_HOST_RE = re.compile(
+    r"^https?://(www\.)?(example|sample|placeholder|yourdomain|foo|test)\d*\.(com|org|net|io|co)(/|$)", re.I
+)
 _ARXIV_ABS = re.compile(r"^https://arxiv\.org/abs/\d{4}\.\d{4,5}$")
 _HF_PAPER = re.compile(r"^https://huggingface\.co/papers/\d{4}\.\d{4,5}$")
 
@@ -53,7 +56,7 @@ def check(report_text, sources):
             problems.append(f"duplicate url between sources {seen_urls[url]!r} and {n!r}: {url}")
         else:
             seen_urls[url] = n
-        if any(host in url for host in _PLACEHOLDER_HOSTS):
+        if any(host in url for host in _PLACEHOLDER_HOSTS) or _PLACEHOLDER_HOST_RE.match(url):
             problems.append(f"source n={n!r} uses a placeholder/fake domain: {url}")
         family = entry.get("source")
         if family == "arxiv" and not _ARXIV_ABS.match(url):

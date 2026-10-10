@@ -1,23 +1,23 @@
 {
   "topic": "survey about world model",
   "model": "gpt-4o-mini",
-  "elapsed_s": 738.8,
-  "subagent_calls": 5,
+  "elapsed_s": 2383.3,
+  "subagent_calls": 19,
   "tool_calls": {
-    "write_todos": 2,
-    "task": 5,
-    "read_file": 3,
+    "write_todos": 3,
+    "task": 19,
+    "read_file": 5,
     "write_file": 2,
     "execute": 3
   },
   "tokens": {
-    "input": 88115,
-    "output": 3700
+    "input": 158484,
+    "output": 4013
   },
-  "n_sources": 10,
+  "n_sources": 7,
   "source_families": [
     "arxiv",
-    "hf-search",
-    "web"
+    "hf-daily",
+    "hf-search"
   ]
 }

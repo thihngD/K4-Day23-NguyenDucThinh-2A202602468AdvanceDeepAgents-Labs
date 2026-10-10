@@ -17,7 +17,7 @@ REPORT_PATH = f"{WORKDIR}/report/report.md"                # the final report
 # source is one of: "arxiv" | "hf-daily" | "hf-search" | "web"
 
 # ---- 2.5: hard caps so a broken prompt cannot loop forever or burn unlimited tokens (RUBRIC 2.5) ----
-LEAD_LIMITS = [ModelCallLimitMiddleware(run_limit=150, exit_behavior="end"), ToolCallLimitMiddleware(run_limit=300)]
+LEAD_LIMITS = [ModelCallLimitMiddleware(run_limit=60, exit_behavior="end"), ToolCallLimitMiddleware(run_limit=120)]
 SUB_LIMITS = [ModelCallLimitMiddleware(run_limit=40, exit_behavior="end"), ToolCallLimitMiddleware(run_limit=60)]
 
 # ---- TODO 1: the lead prompt ----
@@ -46,7 +46,12 @@ Follow these steps in order:
    Issue all these `task` calls together in the same turn so they run in parallel. The subagent sees ONLY the message
    you give it (nothing else of this conversation), so every delegation message MUST state explicitly:
      - the overall survey topic and the specific sub-question to answer;
-     - which source families to prefer when relevant (name at least 2 of: arxiv, hf-daily, hf-search, web);
+     - which 2 source families to use (name exactly 2 of: arxiv, hf-daily, hf-search, web). MECHANICAL RULE so the
+       merged sources.json reaches >= 3 families (RUBRIC 2.2) without guessing: give sub-question 1 "arxiv +
+       hf-search", sub-question 2 "hf-daily + hf-search", and sub-question 3 (and any further one) "arxiv +
+       hf-daily" - `arxiv_search`, `hf_search_papers` and `hf_daily_papers` are all fast and never rate-limited, so
+       this combination reliably covers 3 families on its own, without ever touching `web_search`, whose external
+       search API can be down or rate-limited for many minutes at a time;
      - the notes directory {NOTES_DIR}/ and the exact note filename to write, e.g. {NOTES_DIR}/01-<slug>.md;
      - the required note format (title/id/url/date/source per entry, see researcher instructions).
 
@@ -60,17 +65,18 @@ Follow these steps in order:
    (e.g. an arxiv.org/abs/ link and a mirror or /pdf/ link for the same paper): pick the canonical URL
    (arxiv.org/abs/<id> for arXiv, huggingface.co/papers/<id> for HF) and drop the duplicate. Count the distinct
    "source" values after deduplication. If fewer than 3 of the 4 families (arxiv, hf-daily, hf-search, web) are
-   present, this is a HARD STOP: do not go to step 5 yet. Delegate another `task` to `researcher`, explicitly asking
-   it to call hf_search_papers (and hf_daily_papers as a fallback) on the survey topic's keywords and write its
-   findings to a new note file, then merge that note in too. Try this at most twice; RUBRIC 2.2 requires >= 3 of
-   the 4 families in the final sources.json for every report, so it is worth the extra delegation.
+   present, delegate EXACTLY ONE extra `task` to `researcher`, explicitly asking it to call hf_search_papers (and
+   hf_daily_papers as a fallback - both are fast and reliable) on the survey topic's keywords, and merge that note
+   in too. Do this at most once. Whether or not it gets you to 3 families, move on to step 5 right after - do not
+   delegate again for this reason, and do not spend more than one extra round-trip chasing family diversity: a
+   report with 2 solid, 100% real families beats one that is late, incomplete, or padded with invented sources.
 
    NON-NEGOTIABLE: every "n", "id", "url", "title" in {SOURCES_PATH} must be copy-pasted from a real note file that
    a researcher actually wrote after a real tool call - NEVER type one from memory or invent a plausible-looking
    id/URL/title to fill a quota. A fabricated source (a placeholder domain like example.com, a non-numeric
    arXiv/HF id, a title no tool ever returned) makes the ENTIRE report worth ZERO on citation grading, which is far
-   worse than missing a source family. If, after two extra delegations, you still cannot get a 3rd real family,
-   ship the report with only the real families you have - do not invent one.
+   worse than missing a source family. If the one extra delegation above still doesn't get you a 3rd real family,
+   ship the report with only the real families you have - do not invent one and do not delegate again for this.
 
 5. WRITE THE REPORT BODY to {REPORT_PATH} with this exact structure (do NOT write a "## References" section
    yourself -- step 6 generates it):
@@ -117,8 +123,8 @@ Follow these steps in order:
    source URL for each). For any claim it reports UNSUPPORTED or PARTIAL, delete or rewrite that sentence in the
    report body so it only says what the note/source actually supports, then redo steps 6-7.
 
-Only stop once the validator prints OK and the source-family count is >= 3 (or, if a family is truly unavailable
-after a retry in step 4, once you have tried once more to add it)."""
+Stop once the validator prints OK. The source-family count should be >= 3, but after the single extra delegation
+in step 4 you MUST stop trying to add more families either way - ship what you have rather than loop or fabricate."""
 
 # ---- TODO 2: the researcher and citation-checker prompts ----
 RESEARCHER_PROMPT = f"""You are a research subagent. You receive ONE delegation message with a topic, a sub-question,
@@ -133,10 +139,11 @@ Tools available and what each is for:
 
 Rules:
   - Use at least 2 different source families for your sub-question (prefer the families named in your delegation);
-    do not rely on a single tool. Unless told otherwise, ALWAYS call hf_search_papers with a few keywords from your
-    sub-question as one of your families: it is rarely rate-limited and keeps the whole report's source mix diverse
-    (RUBRIC 2.2 needs >= 3 of arxiv/hf-daily/hf-search/web across the final report). If it returns "NO RESULTS",
-    try hf_daily_papers with a matching `keyword` before giving up on the HF family.
+    do not rely on a single tool. ALWAYS call BOTH `hf_search_papers` (with a few keywords from your sub-question)
+    AND `hf_daily_papers` (with a matching `keyword`) in addition to whatever your delegation named - both are fast
+    and never rate-limited, and calling both keeps the whole report's source mix diverse (RUBRIC 2.2 needs >= 3 of
+    arxiv/hf-daily/hf-search/web across the final report). It is fine for a sub-question to end up citing 3-4
+    families this way; more diversity never hurts.
   - Every tool returns a plain string: "NO RESULTS" (nothing found), "ERROR: ..." (the source failed), or a JSON list
     of records. On "ERROR" or "NO RESULTS", do NOT repeat the exact same call: rephrase the query (fewer/different
     keywords) or switch to a different tool/source family.

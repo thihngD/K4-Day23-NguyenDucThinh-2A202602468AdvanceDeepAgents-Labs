@@ -1,23 +1,23 @@
 {
   "topic": "survey about LLM agents and tool use",
   "model": "gpt-4o-mini",
-  "elapsed_s": 69.7,
-  "subagent_calls": 3,
+  "elapsed_s": 2012.4,
+  "subagent_calls": 9,
   "tool_calls": {
-    "write_todos": 2,
-    "task": 3,
-    "read_file": 5,
-    "write_file": 2,
-    "execute": 2
+    "write_todos": 3,
+    "task": 9,
+    "read_file": 9,
+    "write_file": 5,
+    "execute": 6,
+    "edit_file": 1
   },
   "tokens": {
-    "input": 80969,
-    "output": 3543
+    "input": 310842,
+    "output": 8058
   },
-  "n_sources": 9,
+  "n_sources": 12,
   "source_families": [
     "arxiv",
-    "hf-search",
-    "web"
+    "hf-search"
   ]
 }

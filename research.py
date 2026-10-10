@@ -11,6 +11,7 @@ from collections import Counter
 from pathlib import Path
 
 from agents import FINALIZER_PATH, REPORT_PATH, SOURCES_PATH, VALIDATOR_PATH, WORKDIR, build_lead_agent
+from check_citations import check
 from model import make_model
 from sandbox import download, open_sandbox, upload
 
@@ -74,6 +75,10 @@ def save_outputs(backend, topic, messages, elapsed, model_name, reports_dir=REPO
         raise RuntimeError(f"sources.json is not valid JSON: {exc}") from exc
     if not isinstance(sources, list) or not sources:
         raise RuntimeError("sources.json must be a non-empty JSON list")
+    report_text = report.decode("utf-8", errors="replace")
+    problems = check(report_text, sources)
+    if problems:
+        raise RuntimeError("report failed citation validation:\n" + "\n".join(problems))
 
     reports_dir.mkdir(parents=True, exist_ok=True)
     slug = slugify(topic)
@@ -109,7 +114,7 @@ def main(topic):
         agent = build_lead_agent(backend, model)
         try:
             result = agent.invoke({"messages": [{"role": "user", "content": build_prompt(topic)}]},
-                                  config={"recursion_limit": 1000})
+                                  config={"recursion_limit": 250})
         except Exception as exc:
             print(f"FAILED: agent run raised {type(exc).__name__}: {exc}", file=sys.stderr)
             return 1

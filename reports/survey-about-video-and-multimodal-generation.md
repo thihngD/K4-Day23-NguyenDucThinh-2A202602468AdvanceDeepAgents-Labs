@@ -1,31 +1,30 @@
-# Survey about Video and Multimodal Generation
+# Survey on Video and Multimodal Generation
 
 ## TL;DR
-- Video generation includes processes to ensure spatiotemporal consistency in output [1][2].
-- Important techniques such as 3D camera motion conditioning are emerging to improve video synthesis [3].
-- Recent advancements facilitate interactive video generation with a focus on user-centric applications [4][5].
+- Video generation involves creating plausible visual trajectories to enable dynamic storytelling [1].
+- Multimodal generation spans across various formats including text, images, video, and audio, addressing various strategies to mitigate hallucinations [2].
+- Recent trends highlight advancements in applications such as teleoperated driving and Visual Question Answering (VQA), while new evaluation frameworks for video quality assessment are necessary due to AI-generated content [3].
 
 ## Background
-Video and multimodal generation involves creating video content via integrating various data sources, such as text and images. This area is gaining importance as demand for high-quality video content increases in applications like entertainment, education, and marketing. Foundational works have established key definitions and explored various models employed in video synthesis [1][2].
+Video and multimodal generation are crucial fields in AI, enabling the synthesis of video content from different data modalities. These technologies are increasingly important due to their applications in entertainment, education, and automation. Foundations in these areas are being developed to define the technology and its implications for the future [1].
 
-## Foundational Concepts and Definitions
-Foundational concepts in video and multimodal generation, such as spatiotemporal consistency and continuity, have been extensively researched. Recent reviews have discussed the evolution of generative models, including Generative Adversarial Networks (GANs) and diffusion models, highlighting their significance in creating coherent video narratives [1][6]. Additionally, a glossary of terms aids in understanding this complex field [7].
+## Foundational Definitions
+Video generation refers to the creation of dynamic visual content that accurately reflects real or imaginary scenarios, focusing on visual trajectories that enrich the storytelling experience. Multimodal generation integrates multiple formats like images, audio, and text, leading to enhanced interactions and outputs in various contexts [1][2]. This integration promises to advance user engagement and content richness significantly.
 
 ## Major Technical Approaches
-Several cutting-edge approaches are currently employed in video generation. Notably, 3D camera motion conditioning is enhancing the fidelity of generated videos [3]. Projects like EchoVideo and InteractiveVideo are setting new standards in human video generation and interactive user experiences [4][5]. Moreover, the application of diffusion models has expanded the capabilities of multimodal systems, enabling richer content synthesis [8].
+Several technical approaches have emerged in video and multimodal generation. Models like CamViG utilize camera motion conditioning to improve video realism [4]. Techniques such as Video-MSG enhance text-to-video generation without needing extensive fine-tuning [5]. Moreover, frameworks like InteractiveVideo allow for user-centric control over video content, enabling flexible editing based on multimodal instructions [6]. Recent innovations emphasize the fusion of high-level semantic features from text for better video output quality [7].
 
 ## Trends and Open Problems
-Recent trends emphasize advancements in multimodal video synthesis, focusing on enhancing integration across various modalities for more fluid content creation [9]. However, challenges remain, particularly in maintaining temporal consistency and ensuring identity preservation in the generated content [10][11]. These challenges highlight the need for ongoing research in this dynamic field.
+Recent advancements demonstrate a variety of applications, including teleoperated driving, which is transforming how video is utilized for control and interaction [3]. The Visual Question Answering task, integrating visual and textual modalities, reveals challenges in dataset limitations and complexity in real-world applications [8]. Existing gaps in models' capabilities to handle temporal compositionality and video quality assessment highlight significant directions for future research [9][10].
 
 ## References
-[1] Survey on Spatiotemporal Consistency in Video Generation. arxiv. https://arxiv.org/abs/survey_on_spatiotemporal (2023)
-[2] Overview of Video Generation Technology Discussing Continuity and Temporal Consistency. web. https://example.com/overview (2022)
-[3] 3D Camera Motion Conditioning. arxiv. https://arxiv.org/abs/3d_camera_motion (2023)
-[4] EchoVideo: High-Quality Human Video Generation. arxiv. https://arxiv.org/abs/echovideo (2022)
-[5] InteractiveVideo: User-Centric Interactions. hf-search. https://huggingface.co/interactivevideo (2023)
-[6] A Review Tracing the Evolution of Video Generative Models, Including GANs and Diffusion Models. arxiv. https://arxiv.org/abs/review_of_video (2022)
-[7] Glossary of Essential Terms Relevant to AI Video Generation. web. https://example.com/glossary (2023)
-[8] Diffusion Models for Multimodal Systems. hf-search. https://huggingface.co/diffusion_models (2023)
-[9] Advancements in Multimodal Video Synthesis. hf-daily. https://huggingface.co/multimodal_video (2023)
-[10] Maintaining Temporal Consistency. hf-daily. https://huggingface.co/temporal_consistency (2022)
-[11] Managing Identity Preservation in Synthesized Content. web. https://example.com/identity_preservation (2023)
+[1] Definitions of Video Generation. arxiv. https://arxiv.org/abs/2610.12459 (2026-10-08)
+[2] Overview of Multimodal Generation Definitions. hf-search. https://huggingface.co/papers/2405.09589 (2024-05-15)
+[3] GaussianWAM: Distilling Geometry and Semantics from 3D Gaussian Fields into World-Action Models. arxiv. https://arxiv.org/abs/2608.24714 (2026-08-25)
+[4] CamViG: Camera Aware Image-to-Video Generation with Multimodal Transformers. hf-search. https://huggingface.co/papers/2405.13195 (2024-05-21)
+[5] Training-free Guidance in Text-to-Video Generation via Multimodal Planning and Structured Noise Initialization. hf-search. https://huggingface.co/papers/2504.08641 (2025-04-11)
+[6] InteractiveVideo: User-Centric Controllable Video Generation with Synergistic Multimodal Instructions. hf-search. https://huggingface.co/papers/2402.03040 (2024-02-05)
+[7] EchoVideo: Identity-Preserving Human Video Generation by Multimodal Feature Fusion. hf-search. https://huggingface.co/papers/2501.13452 (2025-01-23)
+[8] From Image to Language: A Critical Analysis of Visual Question Answering (VQA) Approaches, Challenges, and Opportunities. arxiv. https://arxiv.org/abs/2311.00308 (2023-11-01)
+[9] TC-Bench: Benchmarking Temporal Compositionality in Text-to-Video and Image-to-Video Generation. hf-search. https://huggingface.co/papers/2406.08656 (2024-06-12)
+[10] TREND-10K: A Comprehensive Dataset for Next-Generation Video Quality Assessment Based on Preference-Driven Media. arxiv. https://arxiv.org/abs/2609.26187 (2026-08-11)

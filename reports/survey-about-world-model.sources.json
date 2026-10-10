@@ -1,30 +1,6 @@
 [
   {
     "n": 1,
-    "id": "world-model-artificial-intelligence",
-    "url": "https://en.wikipedia.org/wiki/World_model_(artificial_intelligence)",
-    "title": "World model (artificial intelligence)",
-    "date": "2026-10-06",
-    "source": "web"
-  },
-  {
-    "n": 2,
-    "id": "world-models-comprehensive-survey",
-    "url": "https://arxiv.science/abs/2606.00133",
-    "title": "World Models: A Comprehensive Survey of Architectures, Methodologies, Reasoning Paradigms, and Applications",
-    "date": "2026-05-28",
-    "source": "web"
-  },
-  {
-    "n": 3,
-    "id": "critique-world-model",
-    "url": "https://arxiv.org/pdf/2507.05169.pdf",
-    "title": "Critique of World Model",
-    "date": "2026-06-17",
-    "source": "web"
-  },
-  {
-    "n": 4,
     "id": "1803.10122",
     "url": "https://huggingface.co/papers/1803.10122",
     "title": "World Models",
@@ -32,51 +8,51 @@
     "source": "hf-search"
   },
   {
-    "n": 5,
-    "id": "2306.04347",
-    "url": "https://huggingface.co/papers/2306.04347",
-    "title": "World Models for Math Story Problems",
-    "date": "2023-06-07",
+    "n": 2,
+    "id": "2610.12459",
+    "url": "https://huggingface.co/papers/2610.12459",
+    "title": "WorldGuide: Goal-Directed Video World Model for Procedural Task Execution",
+    "date": "2026-10-08",
+    "source": "hf-daily"
+  },
+  {
+    "n": 3,
+    "id": "2610.12468",
+    "url": "https://arxiv.org/abs/2610.12468",
+    "title": "DreamTrue: Action-Faithful Robot World Model with Counterfactual Post-Training",
+    "date": "2026-10-08",
+    "source": "arxiv"
+  },
+  {
+    "n": 4,
+    "id": "2309.09777",
+    "url": "https://huggingface.co/papers/2309.09777",
+    "title": "DriveDreamer: Towards Real-world-driven World Models for Autonomous Driving",
+    "date": "2023-09-18",
     "source": "hf-search"
   },
   {
+    "n": 5,
+    "id": "2610.11894",
+    "url": "https://arxiv.org/abs/2610.11894",
+    "title": "STcubeOperator: A Framework for Analyzing Spatiotemporal Event Data",
+    "date": "2026-10-08",
+    "source": "arxiv"
+  },
+  {
     "n": 6,
-    "id": "understanding-world-predicting-future",
-    "url": "https://dl.acm.org/doi/pdf/10.1145/3746449",
-    "title": "Understanding World or Predicting Future? A Comprehensive Survey of World Models",
-    "date": "",
-    "source": "web"
+    "id": "2601.07823",
+    "url": "https://huggingface.co/papers/2601.07823",
+    "title": "Video Generation Models in Robotics -- Applications, Research Challenges, Future Directions",
+    "date": "2026-01-12",
+    "source": "hf-search"
   },
   {
     "n": 7,
-    "id": "a-tutorial-on-world-models-and-physical-ai",
-    "url": "https://arxiv.org/abs/2606.12783",
-    "title": "A Tutorial on World Models and Physical AI",
-    "date": "2026-06-11",
-    "source": "arxiv"
-  },
-  {
-    "n": 8,
-    "id": "world-models-a-comprehensive-survey",
-    "url": "https://arxiv.org/pdf/2606.00133",
-    "title": "World Models: A Comprehensive Survey of Architectures, Methodologies, Reasoning Paradigms, and Applications",
-    "date": "2026-05-28",
-    "source": "arxiv"
-  },
-  {
-    "n": 9,
-    "id": "what-does-it-mean-for-a-neural-network-to-learn-a-world-model",
-    "url": "https://arxiv.org/html/2507.21513",
-    "title": "What Does it Mean for a Neural Network to Learn a “World Model”?",
-    "date": "2025-07-29",
-    "source": "arxiv"
-  },
-  {
-    "n": 10,
-    "id": "agentic-world-modeling",
-    "url": "https://arxiv.science/abs/2604.22748",
-    "title": "Agentic World Modeling: Foundations, Capabilities, Laws, and Beyond",
-    "date": "2026-06-16",
-    "source": "web"
+    "id": "2610.11794",
+    "url": "https://huggingface.co/papers/2610.11794",
+    "title": "Memento 3: Model-Based Recursive Self-Improvement through Reflective Rulebooks",
+    "date": "2026-10-08",
+    "source": "hf-daily"
   }
 ]

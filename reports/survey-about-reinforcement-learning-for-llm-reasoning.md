@@ -1,31 +1,27 @@
-# Survey about Reinforcement Learning for LLM Reasoning
+# Survey on Reinforcement Learning for LLM Reasoning
 
-## TL;DR
-- This survey investigates foundational concepts of reinforcement learning (RL), focusing on its application to large language models (LLMs) reasoning, emphasizing the importance of safety and generalization in the context of LLM training [1][2][3].
-- Major approaches highlighted include techniques such as reward-signal-driven federated learning, adaptive reasoning, and the utilization of human feedback, showcasing a diverse array of methods designed to enhance model reasoning [4][5].
-- Recent advancements reveal RL's role in improving LLM capabilities across various tasks, including coding and logic problems, while addressing challenges like computational costs and alignment [6][7].
+## TL;DR  
+- Reinforcement Learning (RL) formalizes learning through trial and error for improving reasoning capabilities in Large Language Models (LLMs) [1].  
+- Major approaches in RL for LLMs include optimizing policies and addressing length bias to enhance reasoning performance [2][3].  
+- Current challenges in RL applications to LLMs revolve around data scarcity and high computational costs, with ongoing research aimed at improving data efficiency [4].  
 
-## Background
-Reinforcement Learning (RL) refers to an area of machine learning where agents learn to make decisions by obtaining rewards from their environment. In the context of LLM reasoning, it has surfaced as a challenging yet promising approach to enhance the efficacy and adaptability of language models in solving complex reasoning tasks. Recent developments have shown that integrating RL in LLM training not only improves performance but also encourages models to self-verify and reflect, providing a pathway to more intelligent and capable AI systems [6].
+## Background  
+Reinforcement Learning (RL) is a vital area of machine learning focusing on how agents ought to take actions in an environment to maximize cumulative reward signals. This paradigm is particularly relevant to LLMs given their need for effective reasoning mechanisms. Recent advancements in RL techniques have shown promise for enhancing the reasoning capabilities of LLMs [5].
 
-## Foundational Definitions and Concepts
-Reinforcement learning operates through frameworks such as Constrained Markov Decision Processes (CMDPs) which focus on safety in decision-making. Key concepts involve human feedback integration, state abstraction for generalization, and the development of metrics for assessing scientific reasoning within LLMs. Recent work suggests that RL can achieve significant advances in general intelligence, particularly in structured reasoning scenarios involving scientific tasks [1][2][3].
+## Foundational Concepts of RL and LLMs  
+RL formalizes learning through trial and error, with agents learning to interact with their environment to maximize numerical rewards [1][6]. The main components of RL, such as states, actions, and policies, are instrumental in structuring the learning process and ensuring optimal behavioral outputs [5]. Moreover, approaches like Length-Unbiased Sequence Policy Optimization have emerged to address specific challenges in reasoning [2].
 
-## Major Technical Approaches
-Several notable strategies utilize RL to enhance LLM reasoning capabilities:
-1. **Human Feedback Incorporation:** Training language models through reinforcement learning from human interactions helps align model responses with user expectations [4].
-2. **Adaptive Reasoning Techniques:** Methods such as federated learning optimizations allow collaborative reasoning enhancements while maintaining privacy [5].
-3. **Cross-Turn Estimation:** Adaptive reasoning allows agents to decide when to engage in more in-depth reasoning based on ongoing interactions, enhancing overall decision-making efficiency [4].
+## Major Approaches and Techniques in RL for LLM Reasoning  
+Recent research has highlighted various RL methods tailored for reasoning in LLMs, including innovative algorithms like Advantage Clipped Policy Optimization, aimed at stabilizing training and enhancing reasoning for complex tasks [7]. Techniques such as ProRL and S-GRPO promote refined reasoning strategies that allow LLMs to operate more efficiently and accurately [3][4].
 
-## Trends and Open Problems
-Over the last two years, significant strides have been made in applying RL to LLMs, with applications expanding beyond language to areas like logic and computational tricks [6]. However, challenges remain regarding algorithm scaling, training efficiency, and addressing computational resource issues, along with aligning ethical AI practices with reinforcement learning methods [7][8]. Future directions focus on hybrid reinforcement learning algorithms that can adapt better and focus on interdisciplinary applications in training and reasoning models where hybrid approaches could be beneficial.
+## Trends and Open Problems  
+As RL for reasoning in LLMs continues to evolve, several trends and challenges have emerged, including the need for data-efficient RL strategies in response to data scarcity [4]. Furthermore, advancements in integrating RL into LLM workflows are ongoing, reflecting the importance of tackling high computational costs and developing innovative evaluation methods [7][4].
 
 ## References
-[1] Probing Scientific General Intelligence of LLMs with Scientist-Aligned Workflows. arxiv. https://arxiv.org/abs/2512.16969 (2025-12-18)
-[2] A Survey of Safe Reinforcement Learning and Constrained MDPs: A Technical Survey on Single-Agent and Multi-Agent Safety. arxiv. https://arxiv.org/abs/2505.17342 (2025-05-22)
-[3] Smaller Abstract State Spaces Enable Cross-Scale Generalization in Reinforcement Learning. arxiv. https://arxiv.org/abs/2605.20272 (2026-05-19)
-[4] Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback. hf-search. https://huggingface.co/papers/2204.05862 (2022-04-12)
-[5] Offline Reinforcement Learning as One Big Sequence Modeling Problem. hf-search. https://huggingface.co/papers/2106.02039 (2021-06-03)
-[6] The State of Reinforcement Learning for LLM Reasoning. web. https://magazine.sebastianraschka.com/p/the-state-of-llm-reasoning-model-training (2025-04-19)
-[7] Reinforcement Learning in the Era of Large Language Models: Challenges and Opportunities. web. https://dlnext.acm.org/doi/10.1145/3837057 (2026-09-29)
-[8] A Survey of Reinforcement Learning for Large Reasoning Models. web. https://arxiv.science/abs/2509.08827 (2025-10-09)
+[1] Reinforcement Learning: An Introduction. web. https://spinningup.openai.com/en/latest/spinningup/rl_intro.html (n.d.)
+[2] Length-Unbiased Sequence Policy Optimization: Revealing and Controlling Response Length Variation in RLVR. hf-search. https://huggingface.co/papers/2602.05261 (n.d.)
+[3] A Survey of Reinforcement Learning for Large Reasoning Models. hf-search. https://huggingface.co/papers/2509.08827 (n.d.)
+[4] Towards Better Training Signal: Advantage Clipped Policy Optimization. arxiv. https://arxiv.org/abs/2609.36816 (2026-09-29)
+[5] Foundational Concepts in Reinforcement Learning. web. http://web.stanford.edu/class/psych209/Readings/SuttonBartoIPRLBook2ndEd.pdf (n.d.)
+[6] Foundations of Machine Learning Reinforcement Learning. web. https://cs.nyu.edu/~mohri/mls/ml_reinforcement_learning.pdf (n.d.)
+[7] KUAISHOU Explorer LLM-Rec Challenge 2026: Reasoning Generative Recommendation. arxiv. https://arxiv.org/abs/2609.39828 (2026-09-30)

@@ -96,8 +96,9 @@ def arxiv_search(query: str, max_results: int = 10) -> str:
             "max_results": max(1, min(max_results, 30)),
             "start": 0,
         }
-        # arXiv also throttles by IP (a whole classroom can share one): give it a long cap and more attempts.
-        resp = with_retry(_http_get(ARXIV_URL, params), attempts=6, base=3.0, cap=60.0)
+        # arXiv also throttles by IP (a whole classroom can share one): retry with a bounded cap/attempt count so
+        # one stuck call cannot stall the whole run (and the sandbox) for minutes.
+        resp = with_retry(_http_get(ARXIV_URL, params), attempts=5, base=3.0, cap=30.0)
         _last_arxiv_call = time.monotonic()
         root = ET.fromstring(resp.text)
         records = []
@@ -225,8 +226,9 @@ def _exa_call(name, arguments):
         texts = [c.get("text", "") for c in result.get("content", []) if c.get("type") == "text"]
         return "\n".join(texts).strip()
 
-    # Exa's free tier can stay limited for minutes when a whole classroom shares one IP: give it a long cap.
-    return with_retry(attempt, attempts=6, base=2.0, cap=60.0)
+    # Exa's free tier can stay limited for a while when a whole classroom shares one IP, but a bounded cap/attempt
+    # count keeps one stuck call from stalling the whole run (and risking the sandbox's own idle timeout).
+    return with_retry(attempt, attempts=5, base=2.0, cap=30.0)
 
 
 @tool
