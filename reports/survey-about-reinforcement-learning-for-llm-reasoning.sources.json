@@ -1,0 +1,66 @@
+[
+  {
+    "n": 1,
+    "id": "probing-scientific-general-intelligence-of-llms-with-scientist-aligned-workflows",
+    "url": "https://arxiv.org/abs/2512.16969",
+    "title": "Probing Scientific General Intelligence of LLMs with Scientist-Aligned Workflows",
+    "date": "2025-12-18",
+    "source": "arxiv"
+  },
+  {
+    "n": 2,
+    "id": "a-survey-of-safe-reinforcement-learning-and-constrained-mdps",
+    "url": "https://arxiv.org/abs/2505.17342",
+    "title": "A Survey of Safe Reinforcement Learning and Constrained MDPs: A Technical Survey on Single-Agent and Multi-Agent Safety",
+    "date": "2025-05-22",
+    "source": "arxiv"
+  },
+  {
+    "n": 3,
+    "id": "smaller-abstract-state-spaces-enable-cross-scale-generalization-in-reinforcement-learning",
+    "url": "https://arxiv.org/abs/2605.20272",
+    "title": "Smaller Abstract State Spaces Enable Cross-Scale Generalization in Reinforcement Learning",
+    "date": "2026-05-19",
+    "source": "arxiv"
+  },
+  {
+    "n": 4,
+    "id": "training-a-helpful-and-harmless-assistant-with-reinforcement-learning-from-human-feedback",
+    "url": "https://huggingface.co/papers/2204.05862",
+    "title": "Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback",
+    "date": "2022-04-12",
+    "source": "hf-search"
+  },
+  {
+    "n": 5,
+    "id": "offline-reinforcement-learning-as-one-big-sequence-modeling-problem",
+    "url": "https://huggingface.co/papers/2106.02039",
+    "title": "Offline Reinforcement Learning as One Big Sequence Modeling Problem",
+    "date": "2021-06-03",
+    "source": "hf-search"
+  },
+  {
+    "n": 6,
+    "id": "state-of-reinforcement-learning-for-llm-reasoning",
+    "url": "https://magazine.sebastianraschka.com/p/the-state-of-llm-reasoning-model-training",
+    "title": "The State of Reinforcement Learning for LLM Reasoning",
+    "date": "2025-04-19",
+    "source": "web"
+  },
+  {
+    "n": 7,
+    "id": "reinforcement-learning-in-era-of-llms",
+    "url": "https://dlnext.acm.org/doi/10.1145/3837057",
+    "title": "Reinforcement Learning in the Era of Large Language Models: Challenges and Opportunities",
+    "date": "2026-09-29",
+    "source": "web"
+  },
+  {
+    "n": 8,
+    "id": "survey-on-rl-for-large-reasoning-models",
+    "url": "https://arxiv.science/abs/2509.08827",
+    "title": "A Survey of Reinforcement Learning for Large Reasoning Models",
+    "date": "2025-10-09",
+    "source": "web"
+  }
+]
